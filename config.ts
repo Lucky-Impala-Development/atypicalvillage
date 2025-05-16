@@ -1,4 +1,4 @@
 export const config = {
-  imageCdnUrl: "https://cdn.atypicalvillage.com/camp/",
+  imageCdnUrl: "https://cdn.atypicalvillage.com/camp",
 };
 

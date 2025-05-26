@@ -3,18 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/A-blue.png" type="image/png" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-tsrouter-app"
-    />
+    <meta name="description" content="A Burning Man Community" />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
-    <title>Create TanStack App - atypicalvillage</title>
+    <title>Atypical Village</title>
   </head>
   <body class="bg-black">
     <div id="app"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      const icons = [
+        "/A-magenta.png",
+        "/A-yellow.png",
+        "/A-orange.png",
+        "/A-green.png",
+        "/A-blue.png",
+      ];
+      let currentIcon = 0;
+      const interval = setInterval(() => {
+        const favicon = document.querySelector('link[rel="icon"]');
+        favicon.href = icons[currentIcon];
+        currentIcon = (currentIcon + 1) % icons.length;
+      }, 1000);
+    </script>
   </body>
 </html>
